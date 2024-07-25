@@ -1,0 +1,368 @@
+[2024-07-23T02:03:17.532+0000] {processor.py:161} INFO - Started process (PID=634) to work on /opt/airflow/dags/dags/binance_btcusdt_dag.py
+[2024-07-23T02:03:17.534+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/dags/binance_btcusdt_dag.py for tasks to queue
+[2024-07-23T02:03:17.537+0000] {logging_mixin.py:188} INFO - [2024-07-23T02:03:17.536+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/dags/binance_btcusdt_dag.py
+[2024-07-23T02:03:17.547+0000] {processor.py:840} INFO - DAG(s) 'binance_btcusdt_dag' retrieved from /opt/airflow/dags/dags/binance_btcusdt_dag.py
+[2024-07-23T02:03:17.736+0000] {logging_mixin.py:188} INFO - [2024-07-23T02:03:17.735+0000] {override.py:1858} INFO - Created Permission View: can delete on DAG:binance_btcusdt_dag
+[2024-07-23T02:03:17.752+0000] {logging_mixin.py:188} INFO - [2024-07-23T02:03:17.751+0000] {override.py:1858} INFO - Created Permission View: can read on DAG:binance_btcusdt_dag
+[2024-07-23T02:03:17.761+0000] {logging_mixin.py:188} INFO - [2024-07-23T02:03:17.761+0000] {override.py:1858} INFO - Created Permission View: can edit on DAG:binance_btcusdt_dag
+[2024-07-23T02:03:17.762+0000] {logging_mixin.py:188} INFO - [2024-07-23T02:03:17.762+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2024-07-23T02:03:17.780+0000] {logging_mixin.py:188} INFO - [2024-07-23T02:03:17.779+0000] {dag.py:3111} INFO - Creating ORM DAG for binance_btcusdt_dag
+[2024-07-23T02:03:17.796+0000] {logging_mixin.py:188} INFO - [2024-07-23T02:03:17.795+0000] {dag.py:3947} INFO - Setting next_dagrun for binance_btcusdt_dag to 2024-07-23 01:50:00+00:00, run_after=2024-07-23 02:00:00+00:00
+[2024-07-23T02:03:17.820+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/dags/binance_btcusdt_dag.py took 0.299 seconds
+[2024-07-23T02:03:48.567+0000] {processor.py:161} INFO - Started process (PID=694) to work on /opt/airflow/dags/dags/binance_btcusdt_dag.py
+[2024-07-23T02:03:48.569+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/dags/binance_btcusdt_dag.py for tasks to queue
+[2024-07-23T02:03:48.574+0000] {logging_mixin.py:188} INFO - [2024-07-23T02:03:48.573+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/dags/binance_btcusdt_dag.py
+[2024-07-23T02:03:48.585+0000] {processor.py:840} INFO - DAG(s) 'binance_btcusdt_dag' retrieved from /opt/airflow/dags/dags/binance_btcusdt_dag.py
+[2024-07-23T02:03:48.625+0000] {logging_mixin.py:188} INFO - [2024-07-23T02:03:48.624+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2024-07-23T02:03:48.665+0000] {logging_mixin.py:188} INFO - [2024-07-23T02:03:48.665+0000] {dag.py:3947} INFO - Setting next_dagrun for binance_btcusdt_dag to 2024-07-23 01:50:00+00:00, run_after=2024-07-23 02:00:00+00:00
+[2024-07-23T02:03:48.702+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/dags/binance_btcusdt_dag.py took 0.147 seconds
+[2024-07-23T02:04:19.807+0000] {processor.py:161} INFO - Started process (PID=753) to work on /opt/airflow/dags/dags/binance_btcusdt_dag.py
+[2024-07-23T02:04:19.828+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/dags/binance_btcusdt_dag.py for tasks to queue
+[2024-07-23T02:04:19.875+0000] {logging_mixin.py:188} INFO - [2024-07-23T02:04:19.866+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/dags/binance_btcusdt_dag.py
+[2024-07-23T02:04:20.033+0000] {processor.py:840} INFO - DAG(s) 'binance_btcusdt_dag' retrieved from /opt/airflow/dags/dags/binance_btcusdt_dag.py
+[2024-07-23T02:04:20.553+0000] {logging_mixin.py:188} INFO - [2024-07-23T02:04:20.546+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2024-07-23T02:04:21.255+0000] {logging_mixin.py:188} INFO - [2024-07-23T02:04:21.249+0000] {dag.py:3947} INFO - Setting next_dagrun for binance_btcusdt_dag to 2024-07-23 01:50:00+00:00, run_after=2024-07-23 02:00:00+00:00
+[2024-07-23T02:04:21.865+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/dags/binance_btcusdt_dag.py took 2.261 seconds
+[2024-07-23T02:04:52.586+0000] {processor.py:161} INFO - Started process (PID=812) to work on /opt/airflow/dags/dags/binance_btcusdt_dag.py
+[2024-07-23T02:04:52.589+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/dags/binance_btcusdt_dag.py for tasks to queue
+[2024-07-23T02:04:52.597+0000] {logging_mixin.py:188} INFO - [2024-07-23T02:04:52.596+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/dags/binance_btcusdt_dag.py
+[2024-07-23T02:04:52.621+0000] {processor.py:840} INFO - DAG(s) 'binance_btcusdt_dag' retrieved from /opt/airflow/dags/dags/binance_btcusdt_dag.py
+[2024-07-23T02:04:52.715+0000] {logging_mixin.py:188} INFO - [2024-07-23T02:04:52.714+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2024-07-23T02:04:52.813+0000] {logging_mixin.py:188} INFO - [2024-07-23T02:04:52.812+0000] {dag.py:3947} INFO - Setting next_dagrun for binance_btcusdt_dag to 2024-07-23 01:50:00+00:00, run_after=2024-07-23 02:00:00+00:00
+[2024-07-23T02:04:52.890+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/dags/binance_btcusdt_dag.py took 0.332 seconds
+[2024-07-23T02:05:23.721+0000] {processor.py:161} INFO - Started process (PID=877) to work on /opt/airflow/dags/dags/binance_btcusdt_dag.py
+[2024-07-23T02:05:23.727+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/dags/binance_btcusdt_dag.py for tasks to queue
+[2024-07-23T02:05:23.739+0000] {logging_mixin.py:188} INFO - [2024-07-23T02:05:23.737+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/dags/binance_btcusdt_dag.py
+[2024-07-23T02:05:23.773+0000] {processor.py:840} INFO - DAG(s) 'binance_btcusdt_dag' retrieved from /opt/airflow/dags/dags/binance_btcusdt_dag.py
+[2024-07-23T02:05:23.889+0000] {logging_mixin.py:188} INFO - [2024-07-23T02:05:23.888+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2024-07-23T02:05:24.016+0000] {logging_mixin.py:188} INFO - [2024-07-23T02:05:24.015+0000] {dag.py:3947} INFO - Setting next_dagrun for binance_btcusdt_dag to 2024-07-23 01:50:00+00:00, run_after=2024-07-23 02:00:00+00:00
+[2024-07-23T02:05:24.126+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/dags/binance_btcusdt_dag.py took 0.446 seconds
+[2024-07-23T02:05:54.902+0000] {processor.py:161} INFO - Started process (PID=936) to work on /opt/airflow/dags/dags/binance_btcusdt_dag.py
+[2024-07-23T02:05:54.904+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/dags/binance_btcusdt_dag.py for tasks to queue
+[2024-07-23T02:05:54.906+0000] {logging_mixin.py:188} INFO - [2024-07-23T02:05:54.905+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/dags/binance_btcusdt_dag.py
+[2024-07-23T02:05:54.911+0000] {processor.py:840} INFO - DAG(s) 'binance_btcusdt_dag' retrieved from /opt/airflow/dags/dags/binance_btcusdt_dag.py
+[2024-07-23T02:05:54.932+0000] {logging_mixin.py:188} INFO - [2024-07-23T02:05:54.932+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2024-07-23T02:05:54.956+0000] {logging_mixin.py:188} INFO - [2024-07-23T02:05:54.956+0000] {dag.py:3947} INFO - Setting next_dagrun for binance_btcusdt_dag to 2024-07-23 01:50:00+00:00, run_after=2024-07-23 02:00:00+00:00
+[2024-07-23T02:05:54.979+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/dags/binance_btcusdt_dag.py took 0.084 seconds
+[2024-07-23T02:06:25.455+0000] {processor.py:161} INFO - Started process (PID=995) to work on /opt/airflow/dags/dags/binance_btcusdt_dag.py
+[2024-07-23T02:06:25.456+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/dags/binance_btcusdt_dag.py for tasks to queue
+[2024-07-23T02:06:25.459+0000] {logging_mixin.py:188} INFO - [2024-07-23T02:06:25.458+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/dags/binance_btcusdt_dag.py
+[2024-07-23T02:06:25.466+0000] {processor.py:840} INFO - DAG(s) 'binance_btcusdt_dag' retrieved from /opt/airflow/dags/dags/binance_btcusdt_dag.py
+[2024-07-23T02:06:25.491+0000] {logging_mixin.py:188} INFO - [2024-07-23T02:06:25.491+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2024-07-23T02:06:25.522+0000] {logging_mixin.py:188} INFO - [2024-07-23T02:06:25.522+0000] {dag.py:3947} INFO - Setting next_dagrun for binance_btcusdt_dag to 2024-07-23 01:50:00+00:00, run_after=2024-07-23 02:00:00+00:00
+[2024-07-23T02:06:25.552+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/dags/binance_btcusdt_dag.py took 0.105 seconds
+[2024-07-23T02:06:55.589+0000] {processor.py:161} INFO - Started process (PID=1054) to work on /opt/airflow/dags/dags/binance_btcusdt_dag.py
+[2024-07-23T02:06:55.590+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/dags/binance_btcusdt_dag.py for tasks to queue
+[2024-07-23T02:06:55.594+0000] {logging_mixin.py:188} INFO - [2024-07-23T02:06:55.593+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/dags/binance_btcusdt_dag.py
+[2024-07-23T02:06:55.600+0000] {processor.py:840} INFO - DAG(s) 'binance_btcusdt_dag' retrieved from /opt/airflow/dags/dags/binance_btcusdt_dag.py
+[2024-07-23T02:06:55.626+0000] {logging_mixin.py:188} INFO - [2024-07-23T02:06:55.625+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2024-07-23T02:06:55.655+0000] {logging_mixin.py:188} INFO - [2024-07-23T02:06:55.655+0000] {dag.py:3947} INFO - Setting next_dagrun for binance_btcusdt_dag to 2024-07-23 01:50:00+00:00, run_after=2024-07-23 02:00:00+00:00
+[2024-07-23T02:06:55.684+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/dags/binance_btcusdt_dag.py took 0.102 seconds
+[2024-07-23T02:07:25.797+0000] {processor.py:161} INFO - Started process (PID=1113) to work on /opt/airflow/dags/dags/binance_btcusdt_dag.py
+[2024-07-23T02:07:25.797+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/dags/binance_btcusdt_dag.py for tasks to queue
+[2024-07-23T02:07:25.800+0000] {logging_mixin.py:188} INFO - [2024-07-23T02:07:25.800+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/dags/binance_btcusdt_dag.py
+[2024-07-23T02:07:25.808+0000] {processor.py:840} INFO - DAG(s) 'binance_btcusdt_dag' retrieved from /opt/airflow/dags/dags/binance_btcusdt_dag.py
+[2024-07-23T02:07:25.836+0000] {logging_mixin.py:188} INFO - [2024-07-23T02:07:25.836+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2024-07-23T02:07:25.869+0000] {logging_mixin.py:188} INFO - [2024-07-23T02:07:25.869+0000] {dag.py:3947} INFO - Setting next_dagrun for binance_btcusdt_dag to 2024-07-23 01:50:00+00:00, run_after=2024-07-23 02:00:00+00:00
+[2024-07-23T02:07:25.898+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/dags/binance_btcusdt_dag.py took 0.110 seconds
+[2024-07-23T02:07:56.265+0000] {processor.py:161} INFO - Started process (PID=1173) to work on /opt/airflow/dags/dags/binance_btcusdt_dag.py
+[2024-07-23T02:07:56.266+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/dags/binance_btcusdt_dag.py for tasks to queue
+[2024-07-23T02:07:56.269+0000] {logging_mixin.py:188} INFO - [2024-07-23T02:07:56.268+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/dags/binance_btcusdt_dag.py
+[2024-07-23T02:07:56.276+0000] {processor.py:840} INFO - DAG(s) 'binance_btcusdt_dag' retrieved from /opt/airflow/dags/dags/binance_btcusdt_dag.py
+[2024-07-23T02:07:56.300+0000] {logging_mixin.py:188} INFO - [2024-07-23T02:07:56.300+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2024-07-23T02:07:56.325+0000] {logging_mixin.py:188} INFO - [2024-07-23T02:07:56.325+0000] {dag.py:3947} INFO - Setting next_dagrun for binance_btcusdt_dag to 2024-07-23 01:50:00+00:00, run_after=2024-07-23 02:00:00+00:00
+[2024-07-23T02:07:56.350+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/dags/binance_btcusdt_dag.py took 0.094 seconds
+[2024-07-23T02:08:26.788+0000] {processor.py:161} INFO - Started process (PID=1229) to work on /opt/airflow/dags/dags/binance_btcusdt_dag.py
+[2024-07-23T02:08:26.789+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/dags/binance_btcusdt_dag.py for tasks to queue
+[2024-07-23T02:08:26.791+0000] {logging_mixin.py:188} INFO - [2024-07-23T02:08:26.790+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/dags/binance_btcusdt_dag.py
+[2024-07-23T02:08:26.797+0000] {processor.py:840} INFO - DAG(s) 'binance_btcusdt_dag' retrieved from /opt/airflow/dags/dags/binance_btcusdt_dag.py
+[2024-07-23T02:08:26.820+0000] {logging_mixin.py:188} INFO - [2024-07-23T02:08:26.820+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2024-07-23T02:08:26.844+0000] {logging_mixin.py:188} INFO - [2024-07-23T02:08:26.844+0000] {dag.py:3947} INFO - Setting next_dagrun for binance_btcusdt_dag to 2024-07-23 01:50:00+00:00, run_after=2024-07-23 02:00:00+00:00
+[2024-07-23T02:08:26.867+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/dags/binance_btcusdt_dag.py took 0.086 seconds
+[2024-07-23T02:08:57.657+0000] {processor.py:161} INFO - Started process (PID=1288) to work on /opt/airflow/dags/dags/binance_btcusdt_dag.py
+[2024-07-23T02:08:57.659+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/dags/binance_btcusdt_dag.py for tasks to queue
+[2024-07-23T02:08:57.662+0000] {logging_mixin.py:188} INFO - [2024-07-23T02:08:57.661+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/dags/binance_btcusdt_dag.py
+[2024-07-23T02:08:57.668+0000] {processor.py:840} INFO - DAG(s) 'binance_btcusdt_dag' retrieved from /opt/airflow/dags/dags/binance_btcusdt_dag.py
+[2024-07-23T02:08:57.695+0000] {logging_mixin.py:188} INFO - [2024-07-23T02:08:57.694+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2024-07-23T02:08:57.731+0000] {logging_mixin.py:188} INFO - [2024-07-23T02:08:57.731+0000] {dag.py:3947} INFO - Setting next_dagrun for binance_btcusdt_dag to 2024-07-23 01:50:00+00:00, run_after=2024-07-23 02:00:00+00:00
+[2024-07-23T02:08:57.762+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/dags/binance_btcusdt_dag.py took 0.111 seconds
+[2024-07-23T02:09:28.444+0000] {processor.py:161} INFO - Started process (PID=1346) to work on /opt/airflow/dags/dags/binance_btcusdt_dag.py
+[2024-07-23T02:09:28.445+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/dags/binance_btcusdt_dag.py for tasks to queue
+[2024-07-23T02:09:28.446+0000] {logging_mixin.py:188} INFO - [2024-07-23T02:09:28.446+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/dags/binance_btcusdt_dag.py
+[2024-07-23T02:09:28.451+0000] {processor.py:840} INFO - DAG(s) 'binance_btcusdt_dag' retrieved from /opt/airflow/dags/dags/binance_btcusdt_dag.py
+[2024-07-23T02:09:28.476+0000] {logging_mixin.py:188} INFO - [2024-07-23T02:09:28.475+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2024-07-23T02:09:28.507+0000] {logging_mixin.py:188} INFO - [2024-07-23T02:09:28.507+0000] {dag.py:3947} INFO - Setting next_dagrun for binance_btcusdt_dag to 2024-07-23 01:50:00+00:00, run_after=2024-07-23 02:00:00+00:00
+[2024-07-23T02:09:28.529+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/dags/binance_btcusdt_dag.py took 0.092 seconds
+[2024-07-23T02:09:58.659+0000] {processor.py:161} INFO - Started process (PID=1405) to work on /opt/airflow/dags/dags/binance_btcusdt_dag.py
+[2024-07-23T02:09:58.661+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/dags/binance_btcusdt_dag.py for tasks to queue
+[2024-07-23T02:09:58.664+0000] {logging_mixin.py:188} INFO - [2024-07-23T02:09:58.663+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/dags/binance_btcusdt_dag.py
+[2024-07-23T02:09:58.671+0000] {processor.py:840} INFO - DAG(s) 'binance_btcusdt_dag' retrieved from /opt/airflow/dags/dags/binance_btcusdt_dag.py
+[2024-07-23T02:09:58.697+0000] {logging_mixin.py:188} INFO - [2024-07-23T02:09:58.697+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2024-07-23T02:09:58.724+0000] {logging_mixin.py:188} INFO - [2024-07-23T02:09:58.724+0000] {dag.py:3947} INFO - Setting next_dagrun for binance_btcusdt_dag to 2024-07-23 01:50:00+00:00, run_after=2024-07-23 02:00:00+00:00
+[2024-07-23T02:09:58.750+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/dags/binance_btcusdt_dag.py took 0.098 seconds
+[2024-07-23T02:10:28.813+0000] {processor.py:161} INFO - Started process (PID=1464) to work on /opt/airflow/dags/dags/binance_btcusdt_dag.py
+[2024-07-23T02:10:28.814+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/dags/binance_btcusdt_dag.py for tasks to queue
+[2024-07-23T02:10:28.817+0000] {logging_mixin.py:188} INFO - [2024-07-23T02:10:28.816+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/dags/binance_btcusdt_dag.py
+[2024-07-23T02:10:28.826+0000] {processor.py:840} INFO - DAG(s) 'binance_btcusdt_dag' retrieved from /opt/airflow/dags/dags/binance_btcusdt_dag.py
+[2024-07-23T02:10:28.864+0000] {logging_mixin.py:188} INFO - [2024-07-23T02:10:28.864+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2024-07-23T02:10:28.900+0000] {logging_mixin.py:188} INFO - [2024-07-23T02:10:28.900+0000] {dag.py:3947} INFO - Setting next_dagrun for binance_btcusdt_dag to 2024-07-23 02:00:00+00:00, run_after=2024-07-23 02:10:00+00:00
+[2024-07-23T02:10:28.937+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/dags/binance_btcusdt_dag.py took 0.135 seconds
+[2024-07-23T02:10:59.303+0000] {processor.py:161} INFO - Started process (PID=1523) to work on /opt/airflow/dags/dags/binance_btcusdt_dag.py
+[2024-07-23T02:10:59.305+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/dags/binance_btcusdt_dag.py for tasks to queue
+[2024-07-23T02:10:59.307+0000] {logging_mixin.py:188} INFO - [2024-07-23T02:10:59.306+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/dags/binance_btcusdt_dag.py
+[2024-07-23T02:10:59.312+0000] {processor.py:840} INFO - DAG(s) 'binance_btcusdt_dag' retrieved from /opt/airflow/dags/dags/binance_btcusdt_dag.py
+[2024-07-23T02:10:59.333+0000] {logging_mixin.py:188} INFO - [2024-07-23T02:10:59.333+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2024-07-23T02:10:59.358+0000] {logging_mixin.py:188} INFO - [2024-07-23T02:10:59.357+0000] {dag.py:3947} INFO - Setting next_dagrun for binance_btcusdt_dag to 2024-07-23 02:00:00+00:00, run_after=2024-07-23 02:10:00+00:00
+[2024-07-23T02:10:59.383+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/dags/binance_btcusdt_dag.py took 0.086 seconds
+[2024-07-23T02:11:29.482+0000] {processor.py:161} INFO - Started process (PID=1581) to work on /opt/airflow/dags/dags/binance_btcusdt_dag.py
+[2024-07-23T02:11:29.483+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/dags/binance_btcusdt_dag.py for tasks to queue
+[2024-07-23T02:11:29.485+0000] {logging_mixin.py:188} INFO - [2024-07-23T02:11:29.484+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/dags/binance_btcusdt_dag.py
+[2024-07-23T02:11:29.491+0000] {processor.py:840} INFO - DAG(s) 'binance_btcusdt_dag' retrieved from /opt/airflow/dags/dags/binance_btcusdt_dag.py
+[2024-07-23T02:11:29.514+0000] {logging_mixin.py:188} INFO - [2024-07-23T02:11:29.513+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2024-07-23T02:11:29.541+0000] {logging_mixin.py:188} INFO - [2024-07-23T02:11:29.541+0000] {dag.py:3947} INFO - Setting next_dagrun for binance_btcusdt_dag to 2024-07-23 02:00:00+00:00, run_after=2024-07-23 02:10:00+00:00
+[2024-07-23T02:11:29.567+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/dags/binance_btcusdt_dag.py took 0.092 seconds
+[2024-07-23T02:11:59.601+0000] {processor.py:161} INFO - Started process (PID=1640) to work on /opt/airflow/dags/dags/binance_btcusdt_dag.py
+[2024-07-23T02:11:59.618+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/dags/binance_btcusdt_dag.py for tasks to queue
+[2024-07-23T02:11:59.621+0000] {logging_mixin.py:188} INFO - [2024-07-23T02:11:59.620+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/dags/binance_btcusdt_dag.py
+[2024-07-23T02:11:59.627+0000] {processor.py:840} INFO - DAG(s) 'binance_btcusdt_dag' retrieved from /opt/airflow/dags/dags/binance_btcusdt_dag.py
+[2024-07-23T02:11:59.654+0000] {logging_mixin.py:188} INFO - [2024-07-23T02:11:59.654+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2024-07-23T02:11:59.690+0000] {logging_mixin.py:188} INFO - [2024-07-23T02:11:59.689+0000] {dag.py:3947} INFO - Setting next_dagrun for binance_btcusdt_dag to 2024-07-23 02:00:00+00:00, run_after=2024-07-23 02:10:00+00:00
+[2024-07-23T02:11:59.718+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/dags/binance_btcusdt_dag.py took 0.125 seconds
+[2024-07-23T02:12:29.896+0000] {processor.py:161} INFO - Started process (PID=1700) to work on /opt/airflow/dags/dags/binance_btcusdt_dag.py
+[2024-07-23T02:12:29.897+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/dags/binance_btcusdt_dag.py for tasks to queue
+[2024-07-23T02:12:29.898+0000] {logging_mixin.py:188} INFO - [2024-07-23T02:12:29.898+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/dags/binance_btcusdt_dag.py
+[2024-07-23T02:12:29.903+0000] {processor.py:840} INFO - DAG(s) 'binance_btcusdt_dag' retrieved from /opt/airflow/dags/dags/binance_btcusdt_dag.py
+[2024-07-23T02:12:29.923+0000] {logging_mixin.py:188} INFO - [2024-07-23T02:12:29.923+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2024-07-23T02:12:29.948+0000] {logging_mixin.py:188} INFO - [2024-07-23T02:12:29.948+0000] {dag.py:3947} INFO - Setting next_dagrun for binance_btcusdt_dag to 2024-07-23 02:00:00+00:00, run_after=2024-07-23 02:10:00+00:00
+[2024-07-23T02:12:29.970+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/dags/binance_btcusdt_dag.py took 0.080 seconds
+[2024-07-23T02:13:00.099+0000] {processor.py:161} INFO - Started process (PID=1759) to work on /opt/airflow/dags/dags/binance_btcusdt_dag.py
+[2024-07-23T02:13:00.101+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/dags/binance_btcusdt_dag.py for tasks to queue
+[2024-07-23T02:13:00.104+0000] {logging_mixin.py:188} INFO - [2024-07-23T02:13:00.104+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/dags/binance_btcusdt_dag.py
+[2024-07-23T02:13:00.111+0000] {processor.py:840} INFO - DAG(s) 'binance_btcusdt_dag' retrieved from /opt/airflow/dags/dags/binance_btcusdt_dag.py
+[2024-07-23T02:13:00.136+0000] {logging_mixin.py:188} INFO - [2024-07-23T02:13:00.135+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2024-07-23T02:13:00.164+0000] {logging_mixin.py:188} INFO - [2024-07-23T02:13:00.164+0000] {dag.py:3947} INFO - Setting next_dagrun for binance_btcusdt_dag to 2024-07-23 02:00:00+00:00, run_after=2024-07-23 02:10:00+00:00
+[2024-07-23T02:13:00.192+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/dags/binance_btcusdt_dag.py took 0.099 seconds
+[2024-07-23T02:13:30.737+0000] {processor.py:161} INFO - Started process (PID=1818) to work on /opt/airflow/dags/dags/binance_btcusdt_dag.py
+[2024-07-23T02:13:30.739+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/dags/binance_btcusdt_dag.py for tasks to queue
+[2024-07-23T02:13:30.741+0000] {logging_mixin.py:188} INFO - [2024-07-23T02:13:30.741+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/dags/binance_btcusdt_dag.py
+[2024-07-23T02:13:30.748+0000] {processor.py:840} INFO - DAG(s) 'binance_btcusdt_dag' retrieved from /opt/airflow/dags/dags/binance_btcusdt_dag.py
+[2024-07-23T02:13:30.777+0000] {logging_mixin.py:188} INFO - [2024-07-23T02:13:30.776+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2024-07-23T02:13:30.815+0000] {logging_mixin.py:188} INFO - [2024-07-23T02:13:30.815+0000] {dag.py:3947} INFO - Setting next_dagrun for binance_btcusdt_dag to 2024-07-23 02:00:00+00:00, run_after=2024-07-23 02:10:00+00:00
+[2024-07-23T02:13:30.843+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/dags/binance_btcusdt_dag.py took 0.113 seconds
+[2024-07-23T02:14:01.470+0000] {processor.py:161} INFO - Started process (PID=1886) to work on /opt/airflow/dags/dags/binance_btcusdt_dag.py
+[2024-07-23T02:14:01.471+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/dags/binance_btcusdt_dag.py for tasks to queue
+[2024-07-23T02:14:01.474+0000] {logging_mixin.py:188} INFO - [2024-07-23T02:14:01.473+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/dags/binance_btcusdt_dag.py
+[2024-07-23T02:14:01.480+0000] {processor.py:840} INFO - DAG(s) 'binance_btcusdt_dag' retrieved from /opt/airflow/dags/dags/binance_btcusdt_dag.py
+[2024-07-23T02:14:01.506+0000] {logging_mixin.py:188} INFO - [2024-07-23T02:14:01.505+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2024-07-23T02:14:01.533+0000] {logging_mixin.py:188} INFO - [2024-07-23T02:14:01.533+0000] {dag.py:3947} INFO - Setting next_dagrun for binance_btcusdt_dag to 2024-07-23 02:00:00+00:00, run_after=2024-07-23 02:10:00+00:00
+[2024-07-23T02:14:01.557+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/dags/binance_btcusdt_dag.py took 0.094 seconds
+[2024-07-23T02:14:32.350+0000] {processor.py:161} INFO - Started process (PID=1945) to work on /opt/airflow/dags/dags/binance_btcusdt_dag.py
+[2024-07-23T02:14:32.360+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/dags/binance_btcusdt_dag.py for tasks to queue
+[2024-07-23T02:14:32.362+0000] {logging_mixin.py:188} INFO - [2024-07-23T02:14:32.362+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/dags/binance_btcusdt_dag.py
+[2024-07-23T02:14:32.370+0000] {processor.py:840} INFO - DAG(s) 'binance_btcusdt_dag' retrieved from /opt/airflow/dags/dags/binance_btcusdt_dag.py
+[2024-07-23T02:14:32.400+0000] {logging_mixin.py:188} INFO - [2024-07-23T02:14:32.399+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2024-07-23T02:14:32.437+0000] {logging_mixin.py:188} INFO - [2024-07-23T02:14:32.437+0000] {dag.py:3947} INFO - Setting next_dagrun for binance_btcusdt_dag to 2024-07-23 02:00:00+00:00, run_after=2024-07-23 02:10:00+00:00
+[2024-07-23T02:14:32.481+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/dags/binance_btcusdt_dag.py took 0.144 seconds
+[2024-07-23T02:15:02.615+0000] {processor.py:161} INFO - Started process (PID=2004) to work on /opt/airflow/dags/dags/binance_btcusdt_dag.py
+[2024-07-23T02:15:02.620+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/dags/binance_btcusdt_dag.py for tasks to queue
+[2024-07-23T02:15:02.628+0000] {logging_mixin.py:188} INFO - [2024-07-23T02:15:02.627+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/dags/binance_btcusdt_dag.py
+[2024-07-23T02:15:02.650+0000] {processor.py:840} INFO - DAG(s) 'binance_btcusdt_dag' retrieved from /opt/airflow/dags/dags/binance_btcusdt_dag.py
+[2024-07-23T02:15:02.730+0000] {logging_mixin.py:188} INFO - [2024-07-23T02:15:02.729+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2024-07-23T02:15:02.844+0000] {logging_mixin.py:188} INFO - [2024-07-23T02:15:02.843+0000] {dag.py:3947} INFO - Setting next_dagrun for binance_btcusdt_dag to 2024-07-23 02:00:00+00:00, run_after=2024-07-23 02:10:00+00:00
+[2024-07-23T02:15:02.943+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/dags/binance_btcusdt_dag.py took 0.358 seconds
+[2024-07-23T02:15:33.070+0000] {processor.py:161} INFO - Started process (PID=2063) to work on /opt/airflow/dags/dags/binance_btcusdt_dag.py
+[2024-07-23T02:15:33.074+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/dags/binance_btcusdt_dag.py for tasks to queue
+[2024-07-23T02:15:33.082+0000] {logging_mixin.py:188} INFO - [2024-07-23T02:15:33.081+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/dags/binance_btcusdt_dag.py
+[2024-07-23T02:15:33.109+0000] {processor.py:840} INFO - DAG(s) 'binance_btcusdt_dag' retrieved from /opt/airflow/dags/dags/binance_btcusdt_dag.py
+[2024-07-23T02:15:33.228+0000] {logging_mixin.py:188} INFO - [2024-07-23T02:15:33.227+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2024-07-23T02:15:33.361+0000] {logging_mixin.py:188} INFO - [2024-07-23T02:15:33.360+0000] {dag.py:3947} INFO - Setting next_dagrun for binance_btcusdt_dag to 2024-07-23 02:00:00+00:00, run_after=2024-07-23 02:10:00+00:00
+[2024-07-23T02:15:33.465+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/dags/binance_btcusdt_dag.py took 0.423 seconds
+[2024-07-23T02:16:03.625+0000] {processor.py:161} INFO - Started process (PID=2123) to work on /opt/airflow/dags/dags/binance_btcusdt_dag.py
+[2024-07-23T02:16:03.629+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/dags/binance_btcusdt_dag.py for tasks to queue
+[2024-07-23T02:16:03.635+0000] {logging_mixin.py:188} INFO - [2024-07-23T02:16:03.634+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/dags/binance_btcusdt_dag.py
+[2024-07-23T02:16:03.656+0000] {processor.py:840} INFO - DAG(s) 'binance_btcusdt_dag' retrieved from /opt/airflow/dags/dags/binance_btcusdt_dag.py
+[2024-07-23T02:16:04.142+0000] {logging_mixin.py:188} INFO - [2024-07-23T02:16:04.141+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2024-07-23T02:16:04.217+0000] {logging_mixin.py:188} INFO - [2024-07-23T02:16:04.216+0000] {dag.py:3947} INFO - Setting next_dagrun for binance_btcusdt_dag to 2024-07-23 02:00:00+00:00, run_after=2024-07-23 02:10:00+00:00
+[2024-07-23T02:16:04.278+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/dags/binance_btcusdt_dag.py took 0.674 seconds
+[2024-07-23T02:16:34.514+0000] {processor.py:161} INFO - Started process (PID=2182) to work on /opt/airflow/dags/dags/binance_btcusdt_dag.py
+[2024-07-23T02:16:34.517+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/dags/binance_btcusdt_dag.py for tasks to queue
+[2024-07-23T02:16:34.523+0000] {logging_mixin.py:188} INFO - [2024-07-23T02:16:34.522+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/dags/binance_btcusdt_dag.py
+[2024-07-23T02:16:34.543+0000] {processor.py:840} INFO - DAG(s) 'binance_btcusdt_dag' retrieved from /opt/airflow/dags/dags/binance_btcusdt_dag.py
+[2024-07-23T02:16:34.621+0000] {logging_mixin.py:188} INFO - [2024-07-23T02:16:34.620+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2024-07-23T02:16:34.738+0000] {logging_mixin.py:188} INFO - [2024-07-23T02:16:34.737+0000] {dag.py:3947} INFO - Setting next_dagrun for binance_btcusdt_dag to 2024-07-23 02:00:00+00:00, run_after=2024-07-23 02:10:00+00:00
+[2024-07-23T02:16:34.821+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/dags/binance_btcusdt_dag.py took 0.328 seconds
+[2024-07-23T02:17:07.304+0000] {processor.py:161} INFO - Started process (PID=2250) to work on /opt/airflow/dags/dags/binance_btcusdt_dag.py
+[2024-07-23T02:17:07.312+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/dags/binance_btcusdt_dag.py for tasks to queue
+[2024-07-23T02:17:07.330+0000] {logging_mixin.py:188} INFO - [2024-07-23T02:17:07.328+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/dags/binance_btcusdt_dag.py
+[2024-07-23T02:17:07.364+0000] {processor.py:840} INFO - DAG(s) 'binance_btcusdt_dag' retrieved from /opt/airflow/dags/dags/binance_btcusdt_dag.py
+[2024-07-23T02:17:07.502+0000] {logging_mixin.py:188} INFO - [2024-07-23T02:17:07.501+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2024-07-23T02:17:07.796+0000] {logging_mixin.py:188} INFO - [2024-07-23T02:17:07.794+0000] {dag.py:3947} INFO - Setting next_dagrun for binance_btcusdt_dag to 2024-07-23 02:00:00+00:00, run_after=2024-07-23 02:10:00+00:00
+[2024-07-23T02:17:08.052+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/dags/binance_btcusdt_dag.py took 0.826 seconds
+[2024-07-23T02:17:38.532+0000] {processor.py:161} INFO - Started process (PID=2309) to work on /opt/airflow/dags/dags/binance_btcusdt_dag.py
+[2024-07-23T02:17:38.535+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/dags/binance_btcusdt_dag.py for tasks to queue
+[2024-07-23T02:17:38.542+0000] {logging_mixin.py:188} INFO - [2024-07-23T02:17:38.541+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/dags/binance_btcusdt_dag.py
+[2024-07-23T02:17:38.564+0000] {processor.py:840} INFO - DAG(s) 'binance_btcusdt_dag' retrieved from /opt/airflow/dags/dags/binance_btcusdt_dag.py
+[2024-07-23T02:17:38.659+0000] {logging_mixin.py:188} INFO - [2024-07-23T02:17:38.658+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2024-07-23T02:17:38.762+0000] {logging_mixin.py:188} INFO - [2024-07-23T02:17:38.761+0000] {dag.py:3947} INFO - Setting next_dagrun for binance_btcusdt_dag to 2024-07-23 02:00:00+00:00, run_after=2024-07-23 02:10:00+00:00
+[2024-07-23T02:17:38.839+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/dags/binance_btcusdt_dag.py took 0.332 seconds
+[2024-07-23T02:18:09.239+0000] {processor.py:161} INFO - Started process (PID=2368) to work on /opt/airflow/dags/dags/binance_btcusdt_dag.py
+[2024-07-23T02:18:09.243+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/dags/binance_btcusdt_dag.py for tasks to queue
+[2024-07-23T02:18:09.252+0000] {logging_mixin.py:188} INFO - [2024-07-23T02:18:09.251+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/dags/binance_btcusdt_dag.py
+[2024-07-23T02:18:09.276+0000] {processor.py:840} INFO - DAG(s) 'binance_btcusdt_dag' retrieved from /opt/airflow/dags/dags/binance_btcusdt_dag.py
+[2024-07-23T02:18:09.365+0000] {logging_mixin.py:188} INFO - [2024-07-23T02:18:09.364+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2024-07-23T02:18:09.479+0000] {logging_mixin.py:188} INFO - [2024-07-23T02:18:09.478+0000] {dag.py:3947} INFO - Setting next_dagrun for binance_btcusdt_dag to 2024-07-23 02:00:00+00:00, run_after=2024-07-23 02:10:00+00:00
+[2024-07-23T02:18:09.559+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/dags/binance_btcusdt_dag.py took 0.355 seconds
+[2024-07-23T02:18:40.048+0000] {processor.py:161} INFO - Started process (PID=2427) to work on /opt/airflow/dags/dags/binance_btcusdt_dag.py
+[2024-07-23T02:18:40.052+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/dags/binance_btcusdt_dag.py for tasks to queue
+[2024-07-23T02:18:40.060+0000] {logging_mixin.py:188} INFO - [2024-07-23T02:18:40.058+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/dags/binance_btcusdt_dag.py
+[2024-07-23T02:18:40.083+0000] {processor.py:840} INFO - DAG(s) 'binance_btcusdt_dag' retrieved from /opt/airflow/dags/dags/binance_btcusdt_dag.py
+[2024-07-23T02:18:40.178+0000] {logging_mixin.py:188} INFO - [2024-07-23T02:18:40.177+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2024-07-23T02:18:40.276+0000] {logging_mixin.py:188} INFO - [2024-07-23T02:18:40.275+0000] {dag.py:3947} INFO - Setting next_dagrun for binance_btcusdt_dag to 2024-07-23 02:00:00+00:00, run_after=2024-07-23 02:10:00+00:00
+[2024-07-23T02:18:40.364+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/dags/binance_btcusdt_dag.py took 0.344 seconds
+[2024-07-23T02:18:47.306+0000] {processor.py:161} INFO - Started process (PID=2440) to work on /opt/airflow/dags/dags/binance_btcusdt_dag.py
+[2024-07-23T02:18:47.310+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/dags/binance_btcusdt_dag.py for tasks to queue
+[2024-07-23T02:18:47.320+0000] {logging_mixin.py:188} INFO - [2024-07-23T02:18:47.318+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/dags/binance_btcusdt_dag.py
+[2024-07-23T02:18:47.354+0000] {processor.py:840} INFO - DAG(s) 'binance_btcusdt_dag' retrieved from /opt/airflow/dags/dags/binance_btcusdt_dag.py
+[2024-07-23T02:18:47.451+0000] {logging_mixin.py:188} INFO - [2024-07-23T02:18:47.450+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2024-07-23T02:18:47.569+0000] {logging_mixin.py:188} INFO - [2024-07-23T02:18:47.567+0000] {dag.py:3947} INFO - Setting next_dagrun for binance_btcusdt_dag to 2024-07-23 02:00:00+00:00, run_after=2024-07-23 02:10:00+00:00
+[2024-07-23T02:18:47.671+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/dags/binance_btcusdt_dag.py took 0.401 seconds
+[2024-07-23T02:18:52.749+0000] {processor.py:161} INFO - Started process (PID=2447) to work on /opt/airflow/dags/dags/binance_btcusdt_dag.py
+[2024-07-23T02:18:52.752+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/dags/binance_btcusdt_dag.py for tasks to queue
+[2024-07-23T02:18:52.760+0000] {logging_mixin.py:188} INFO - [2024-07-23T02:18:52.758+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/dags/binance_btcusdt_dag.py
+[2024-07-23T02:18:52.784+0000] {processor.py:840} INFO - DAG(s) 'binance_btcusdt_dag' retrieved from /opt/airflow/dags/dags/binance_btcusdt_dag.py
+[2024-07-23T02:18:52.861+0000] {logging_mixin.py:188} INFO - [2024-07-23T02:18:52.860+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2024-07-23T02:18:52.978+0000] {logging_mixin.py:188} INFO - [2024-07-23T02:18:52.977+0000] {dag.py:3947} INFO - Setting next_dagrun for binance_btcusdt_dag to 2024-07-23 02:00:00+00:00, run_after=2024-07-23 02:10:00+00:00
+[2024-07-23T02:18:53.083+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/dags/binance_btcusdt_dag.py took 0.365 seconds
+[2024-07-23T02:19:00.489+0000] {processor.py:161} INFO - Started process (PID=2465) to work on /opt/airflow/dags/dags/binance_btcusdt_dag.py
+[2024-07-23T02:19:00.492+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/dags/binance_btcusdt_dag.py for tasks to queue
+[2024-07-23T02:19:00.500+0000] {logging_mixin.py:188} INFO - [2024-07-23T02:19:00.498+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/dags/binance_btcusdt_dag.py
+[2024-07-23T02:19:00.525+0000] {processor.py:840} INFO - DAG(s) 'binance_btcusdt_dag' retrieved from /opt/airflow/dags/dags/binance_btcusdt_dag.py
+[2024-07-23T02:19:00.601+0000] {logging_mixin.py:188} INFO - [2024-07-23T02:19:00.600+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2024-07-23T02:19:00.724+0000] {logging_mixin.py:188} INFO - [2024-07-23T02:19:00.723+0000] {dag.py:3947} INFO - Setting next_dagrun for binance_btcusdt_dag to 2024-07-23 02:00:00+00:00, run_after=2024-07-23 02:10:00+00:00
+[2024-07-23T02:19:00.834+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/dags/binance_btcusdt_dag.py took 0.370 seconds
+[2024-07-23T02:19:05.593+0000] {processor.py:161} INFO - Started process (PID=2473) to work on /opt/airflow/dags/dags/binance_btcusdt_dag.py
+[2024-07-23T02:19:05.596+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/dags/binance_btcusdt_dag.py for tasks to queue
+[2024-07-23T02:19:05.603+0000] {logging_mixin.py:188} INFO - [2024-07-23T02:19:05.601+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/dags/binance_btcusdt_dag.py
+[2024-07-23T02:19:05.630+0000] {processor.py:840} INFO - DAG(s) 'binance_btcusdt_dag' retrieved from /opt/airflow/dags/dags/binance_btcusdt_dag.py
+[2024-07-23T02:19:05.700+0000] {logging_mixin.py:188} INFO - [2024-07-23T02:19:05.699+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2024-07-23T02:19:05.783+0000] {logging_mixin.py:188} INFO - [2024-07-23T02:19:05.783+0000] {dag.py:3947} INFO - Setting next_dagrun for binance_btcusdt_dag to 2024-07-23 02:00:00+00:00, run_after=2024-07-23 02:10:00+00:00
+[2024-07-23T02:19:05.852+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/dags/binance_btcusdt_dag.py took 0.292 seconds
+[2024-07-23T02:19:36.156+0000] {processor.py:161} INFO - Started process (PID=2528) to work on /opt/airflow/dags/dags/binance_btcusdt_dag.py
+[2024-07-23T02:19:36.159+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/dags/binance_btcusdt_dag.py for tasks to queue
+[2024-07-23T02:19:36.166+0000] {logging_mixin.py:188} INFO - [2024-07-23T02:19:36.164+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/dags/binance_btcusdt_dag.py
+[2024-07-23T02:19:36.185+0000] {processor.py:840} INFO - DAG(s) 'binance_btcusdt_dag' retrieved from /opt/airflow/dags/dags/binance_btcusdt_dag.py
+[2024-07-23T02:19:36.257+0000] {logging_mixin.py:188} INFO - [2024-07-23T02:19:36.256+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2024-07-23T02:19:36.341+0000] {logging_mixin.py:188} INFO - [2024-07-23T02:19:36.340+0000] {dag.py:3947} INFO - Setting next_dagrun for binance_btcusdt_dag to 2024-07-23 02:00:00+00:00, run_after=2024-07-23 02:10:00+00:00
+[2024-07-23T02:19:36.412+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/dags/binance_btcusdt_dag.py took 0.279 seconds
+[2024-07-23T02:20:06.708+0000] {processor.py:161} INFO - Started process (PID=2587) to work on /opt/airflow/dags/dags/binance_btcusdt_dag.py
+[2024-07-23T02:20:06.711+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/dags/binance_btcusdt_dag.py for tasks to queue
+[2024-07-23T02:20:06.715+0000] {logging_mixin.py:188} INFO - [2024-07-23T02:20:06.714+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/dags/binance_btcusdt_dag.py
+[2024-07-23T02:20:06.730+0000] {processor.py:840} INFO - DAG(s) 'binance_btcusdt_dag' retrieved from /opt/airflow/dags/dags/binance_btcusdt_dag.py
+[2024-07-23T02:20:06.791+0000] {logging_mixin.py:188} INFO - [2024-07-23T02:20:06.790+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2024-07-23T02:20:06.867+0000] {logging_mixin.py:188} INFO - [2024-07-23T02:20:06.866+0000] {dag.py:3947} INFO - Setting next_dagrun for binance_btcusdt_dag to 2024-07-23 02:10:00+00:00, run_after=2024-07-23 02:20:00+00:00
+[2024-07-23T02:20:06.939+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/dags/binance_btcusdt_dag.py took 0.251 seconds
+[2024-07-23T02:20:37.016+0000] {processor.py:161} INFO - Started process (PID=2645) to work on /opt/airflow/dags/dags/binance_btcusdt_dag.py
+[2024-07-23T02:20:37.017+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/dags/binance_btcusdt_dag.py for tasks to queue
+[2024-07-23T02:20:37.019+0000] {logging_mixin.py:188} INFO - [2024-07-23T02:20:37.019+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/dags/binance_btcusdt_dag.py
+[2024-07-23T02:20:37.024+0000] {processor.py:840} INFO - DAG(s) 'binance_btcusdt_dag' retrieved from /opt/airflow/dags/dags/binance_btcusdt_dag.py
+[2024-07-23T02:20:37.047+0000] {logging_mixin.py:188} INFO - [2024-07-23T02:20:37.046+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2024-07-23T02:20:37.070+0000] {logging_mixin.py:188} INFO - [2024-07-23T02:20:37.070+0000] {dag.py:3947} INFO - Setting next_dagrun for binance_btcusdt_dag to 2024-07-23 02:10:00+00:00, run_after=2024-07-23 02:20:00+00:00
+[2024-07-23T02:20:37.089+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/dags/binance_btcusdt_dag.py took 0.080 seconds
+[2024-07-23T02:21:07.148+0000] {processor.py:161} INFO - Started process (PID=2704) to work on /opt/airflow/dags/dags/binance_btcusdt_dag.py
+[2024-07-23T02:21:07.148+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/dags/binance_btcusdt_dag.py for tasks to queue
+[2024-07-23T02:21:07.150+0000] {logging_mixin.py:188} INFO - [2024-07-23T02:21:07.150+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/dags/binance_btcusdt_dag.py
+[2024-07-23T02:21:07.156+0000] {processor.py:840} INFO - DAG(s) 'binance_btcusdt_dag' retrieved from /opt/airflow/dags/dags/binance_btcusdt_dag.py
+[2024-07-23T02:21:07.178+0000] {logging_mixin.py:188} INFO - [2024-07-23T02:21:07.177+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2024-07-23T02:21:07.200+0000] {logging_mixin.py:188} INFO - [2024-07-23T02:21:07.200+0000] {dag.py:3947} INFO - Setting next_dagrun for binance_btcusdt_dag to 2024-07-23 02:10:00+00:00, run_after=2024-07-23 02:20:00+00:00
+[2024-07-23T02:21:07.220+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/dags/binance_btcusdt_dag.py took 0.079 seconds
+[2024-07-23T02:21:37.500+0000] {processor.py:161} INFO - Started process (PID=2764) to work on /opt/airflow/dags/dags/binance_btcusdt_dag.py
+[2024-07-23T02:21:37.502+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/dags/binance_btcusdt_dag.py for tasks to queue
+[2024-07-23T02:21:37.503+0000] {logging_mixin.py:188} INFO - [2024-07-23T02:21:37.503+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/dags/binance_btcusdt_dag.py
+[2024-07-23T02:21:37.509+0000] {processor.py:840} INFO - DAG(s) 'binance_btcusdt_dag' retrieved from /opt/airflow/dags/dags/binance_btcusdt_dag.py
+[2024-07-23T02:21:37.531+0000] {logging_mixin.py:188} INFO - [2024-07-23T02:21:37.531+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2024-07-23T02:21:37.553+0000] {logging_mixin.py:188} INFO - [2024-07-23T02:21:37.553+0000] {dag.py:3947} INFO - Setting next_dagrun for binance_btcusdt_dag to 2024-07-23 02:10:00+00:00, run_after=2024-07-23 02:20:00+00:00
+[2024-07-23T02:21:37.572+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/dags/binance_btcusdt_dag.py took 0.078 seconds
+[2024-07-23T02:22:07.752+0000] {processor.py:161} INFO - Started process (PID=2823) to work on /opt/airflow/dags/dags/binance_btcusdt_dag.py
+[2024-07-23T02:22:07.753+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/dags/binance_btcusdt_dag.py for tasks to queue
+[2024-07-23T02:22:07.755+0000] {logging_mixin.py:188} INFO - [2024-07-23T02:22:07.755+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/dags/binance_btcusdt_dag.py
+[2024-07-23T02:22:07.762+0000] {processor.py:840} INFO - DAG(s) 'binance_btcusdt_dag' retrieved from /opt/airflow/dags/dags/binance_btcusdt_dag.py
+[2024-07-23T02:22:07.786+0000] {logging_mixin.py:188} INFO - [2024-07-23T02:22:07.785+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2024-07-23T02:22:07.818+0000] {logging_mixin.py:188} INFO - [2024-07-23T02:22:07.817+0000] {dag.py:3947} INFO - Setting next_dagrun for binance_btcusdt_dag to 2024-07-23 02:10:00+00:00, run_after=2024-07-23 02:20:00+00:00
+[2024-07-23T02:22:07.844+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/dags/binance_btcusdt_dag.py took 0.099 seconds
+[2024-07-23T02:22:38.353+0000] {processor.py:161} INFO - Started process (PID=2882) to work on /opt/airflow/dags/dags/binance_btcusdt_dag.py
+[2024-07-23T02:22:38.355+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/dags/binance_btcusdt_dag.py for tasks to queue
+[2024-07-23T02:22:38.357+0000] {logging_mixin.py:188} INFO - [2024-07-23T02:22:38.357+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/dags/binance_btcusdt_dag.py
+[2024-07-23T02:22:38.365+0000] {processor.py:840} INFO - DAG(s) 'binance_btcusdt_dag' retrieved from /opt/airflow/dags/dags/binance_btcusdt_dag.py
+[2024-07-23T02:22:38.393+0000] {logging_mixin.py:188} INFO - [2024-07-23T02:22:38.392+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2024-07-23T02:22:38.428+0000] {logging_mixin.py:188} INFO - [2024-07-23T02:22:38.428+0000] {dag.py:3947} INFO - Setting next_dagrun for binance_btcusdt_dag to 2024-07-23 02:10:00+00:00, run_after=2024-07-23 02:20:00+00:00
+[2024-07-23T02:22:38.457+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/dags/binance_btcusdt_dag.py took 0.113 seconds
+[2024-07-23T02:23:08.910+0000] {processor.py:161} INFO - Started process (PID=2948) to work on /opt/airflow/dags/dags/binance_btcusdt_dag.py
+[2024-07-23T02:23:08.911+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/dags/binance_btcusdt_dag.py for tasks to queue
+[2024-07-23T02:23:08.913+0000] {logging_mixin.py:188} INFO - [2024-07-23T02:23:08.912+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/dags/binance_btcusdt_dag.py
+[2024-07-23T02:23:08.920+0000] {processor.py:840} INFO - DAG(s) 'binance_btcusdt_dag' retrieved from /opt/airflow/dags/dags/binance_btcusdt_dag.py
+[2024-07-23T02:23:08.945+0000] {logging_mixin.py:188} INFO - [2024-07-23T02:23:08.945+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2024-07-23T02:23:08.972+0000] {logging_mixin.py:188} INFO - [2024-07-23T02:23:08.971+0000] {dag.py:3947} INFO - Setting next_dagrun for binance_btcusdt_dag to 2024-07-23 02:20:00+00:00, run_after=2024-07-23 02:30:00+00:00
+[2024-07-23T02:23:08.995+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/dags/binance_btcusdt_dag.py took 0.092 seconds
+[2024-07-23T02:23:39.387+0000] {processor.py:161} INFO - Started process (PID=3006) to work on /opt/airflow/dags/dags/binance_btcusdt_dag.py
+[2024-07-23T02:23:39.389+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/dags/binance_btcusdt_dag.py for tasks to queue
+[2024-07-23T02:23:39.394+0000] {logging_mixin.py:188} INFO - [2024-07-23T02:23:39.393+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/dags/binance_btcusdt_dag.py
+[2024-07-23T02:23:39.410+0000] {processor.py:840} INFO - DAG(s) 'binance_btcusdt_dag' retrieved from /opt/airflow/dags/dags/binance_btcusdt_dag.py
+[2024-07-23T02:23:39.460+0000] {logging_mixin.py:188} INFO - [2024-07-23T02:23:39.459+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2024-07-23T02:23:39.516+0000] {logging_mixin.py:188} INFO - [2024-07-23T02:23:39.516+0000] {dag.py:3947} INFO - Setting next_dagrun for binance_btcusdt_dag to 2024-07-23 02:20:00+00:00, run_after=2024-07-23 02:30:00+00:00
+[2024-07-23T02:23:39.562+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/dags/binance_btcusdt_dag.py took 0.189 seconds
+[2024-07-23T02:24:09.691+0000] {processor.py:161} INFO - Started process (PID=3065) to work on /opt/airflow/dags/dags/binance_btcusdt_dag.py
+[2024-07-23T02:24:09.694+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/dags/binance_btcusdt_dag.py for tasks to queue
+[2024-07-23T02:24:09.700+0000] {logging_mixin.py:188} INFO - [2024-07-23T02:24:09.699+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/dags/binance_btcusdt_dag.py
+[2024-07-23T02:24:09.720+0000] {processor.py:840} INFO - DAG(s) 'binance_btcusdt_dag' retrieved from /opt/airflow/dags/dags/binance_btcusdt_dag.py
+[2024-07-23T02:24:09.793+0000] {logging_mixin.py:188} INFO - [2024-07-23T02:24:09.792+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2024-07-23T02:24:09.900+0000] {logging_mixin.py:188} INFO - [2024-07-23T02:24:09.899+0000] {dag.py:3947} INFO - Setting next_dagrun for binance_btcusdt_dag to 2024-07-23 02:20:00+00:00, run_after=2024-07-23 02:30:00+00:00
+[2024-07-23T02:24:09.968+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/dags/binance_btcusdt_dag.py took 0.301 seconds
+[2024-07-23T02:24:40.205+0000] {processor.py:161} INFO - Started process (PID=3124) to work on /opt/airflow/dags/dags/binance_btcusdt_dag.py
+[2024-07-23T02:24:40.207+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/dags/binance_btcusdt_dag.py for tasks to queue
+[2024-07-23T02:24:40.214+0000] {logging_mixin.py:188} INFO - [2024-07-23T02:24:40.212+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/dags/binance_btcusdt_dag.py
+[2024-07-23T02:24:40.233+0000] {processor.py:840} INFO - DAG(s) 'binance_btcusdt_dag' retrieved from /opt/airflow/dags/dags/binance_btcusdt_dag.py
+[2024-07-23T02:24:40.312+0000] {logging_mixin.py:188} INFO - [2024-07-23T02:24:40.311+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2024-07-23T02:24:40.400+0000] {logging_mixin.py:188} INFO - [2024-07-23T02:24:40.399+0000] {dag.py:3947} INFO - Setting next_dagrun for binance_btcusdt_dag to 2024-07-23 02:20:00+00:00, run_after=2024-07-23 02:30:00+00:00
+[2024-07-23T02:24:40.465+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/dags/binance_btcusdt_dag.py took 0.283 seconds
+[2024-07-23T02:25:10.568+0000] {processor.py:161} INFO - Started process (PID=3182) to work on /opt/airflow/dags/dags/binance_btcusdt_dag.py
+[2024-07-23T02:25:10.569+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/dags/binance_btcusdt_dag.py for tasks to queue
+[2024-07-23T02:25:10.572+0000] {logging_mixin.py:188} INFO - [2024-07-23T02:25:10.571+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/dags/binance_btcusdt_dag.py
+[2024-07-23T02:25:10.580+0000] {processor.py:840} INFO - DAG(s) 'binance_btcusdt_dag' retrieved from /opt/airflow/dags/dags/binance_btcusdt_dag.py
+[2024-07-23T02:25:10.610+0000] {logging_mixin.py:188} INFO - [2024-07-23T02:25:10.610+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2024-07-23T02:25:10.644+0000] {logging_mixin.py:188} INFO - [2024-07-23T02:25:10.644+0000] {dag.py:3947} INFO - Setting next_dagrun for binance_btcusdt_dag to 2024-07-23 02:20:00+00:00, run_after=2024-07-23 02:30:00+00:00
+[2024-07-23T02:25:10.674+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/dags/binance_btcusdt_dag.py took 0.115 seconds
+[2024-07-23T02:25:40.812+0000] {processor.py:161} INFO - Started process (PID=3240) to work on /opt/airflow/dags/dags/binance_btcusdt_dag.py
+[2024-07-23T02:25:40.813+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/dags/binance_btcusdt_dag.py for tasks to queue
+[2024-07-23T02:25:40.816+0000] {logging_mixin.py:188} INFO - [2024-07-23T02:25:40.816+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/dags/binance_btcusdt_dag.py
+[2024-07-23T02:25:40.824+0000] {processor.py:840} INFO - DAG(s) 'binance_btcusdt_dag' retrieved from /opt/airflow/dags/dags/binance_btcusdt_dag.py
+[2024-07-23T02:25:40.860+0000] {logging_mixin.py:188} INFO - [2024-07-23T02:25:40.860+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2024-07-23T02:25:40.901+0000] {logging_mixin.py:188} INFO - [2024-07-23T02:25:40.901+0000] {dag.py:3947} INFO - Setting next_dagrun for binance_btcusdt_dag to 2024-07-23 02:20:00+00:00, run_after=2024-07-23 02:30:00+00:00
+[2024-07-23T02:25:40.937+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/dags/binance_btcusdt_dag.py took 0.138 seconds
+[2024-07-23T02:26:11.091+0000] {processor.py:161} INFO - Started process (PID=3298) to work on /opt/airflow/dags/dags/binance_btcusdt_dag.py
+[2024-07-23T02:26:11.092+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/dags/binance_btcusdt_dag.py for tasks to queue
+[2024-07-23T02:26:11.094+0000] {logging_mixin.py:188} INFO - [2024-07-23T02:26:11.093+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/dags/binance_btcusdt_dag.py
+[2024-07-23T02:26:11.099+0000] {processor.py:840} INFO - DAG(s) 'binance_btcusdt_dag' retrieved from /opt/airflow/dags/dags/binance_btcusdt_dag.py
+[2024-07-23T02:26:11.124+0000] {logging_mixin.py:188} INFO - [2024-07-23T02:26:11.124+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2024-07-23T02:26:11.154+0000] {logging_mixin.py:188} INFO - [2024-07-23T02:26:11.154+0000] {dag.py:3947} INFO - Setting next_dagrun for binance_btcusdt_dag to 2024-07-23 02:20:00+00:00, run_after=2024-07-23 02:30:00+00:00
+[2024-07-23T02:26:11.179+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/dags/binance_btcusdt_dag.py took 0.096 seconds
+[2024-07-23T02:26:41.679+0000] {processor.py:161} INFO - Started process (PID=3355) to work on /opt/airflow/dags/dags/binance_btcusdt_dag.py
+[2024-07-23T02:26:41.681+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/dags/binance_btcusdt_dag.py for tasks to queue
+[2024-07-23T02:26:41.688+0000] {logging_mixin.py:188} INFO - [2024-07-23T02:26:41.686+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/dags/binance_btcusdt_dag.py
+[2024-07-23T02:26:41.708+0000] {processor.py:840} INFO - DAG(s) 'binance_btcusdt_dag' retrieved from /opt/airflow/dags/dags/binance_btcusdt_dag.py
+[2024-07-23T02:26:41.779+0000] {logging_mixin.py:188} INFO - [2024-07-23T02:26:41.778+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2024-07-23T02:26:41.864+0000] {logging_mixin.py:188} INFO - [2024-07-23T02:26:41.863+0000] {dag.py:3947} INFO - Setting next_dagrun for binance_btcusdt_dag to 2024-07-23 02:20:00+00:00, run_after=2024-07-23 02:30:00+00:00
+[2024-07-23T02:26:41.927+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/dags/binance_btcusdt_dag.py took 0.273 seconds
+[2024-07-23T02:27:12.623+0000] {processor.py:161} INFO - Started process (PID=3414) to work on /opt/airflow/dags/dags/binance_btcusdt_dag.py
+[2024-07-23T02:27:12.627+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/dags/binance_btcusdt_dag.py for tasks to queue
+[2024-07-23T02:27:12.634+0000] {logging_mixin.py:188} INFO - [2024-07-23T02:27:12.633+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/dags/binance_btcusdt_dag.py
+[2024-07-23T02:27:12.654+0000] {processor.py:840} INFO - DAG(s) 'binance_btcusdt_dag' retrieved from /opt/airflow/dags/dags/binance_btcusdt_dag.py
+[2024-07-23T02:27:12.735+0000] {logging_mixin.py:188} INFO - [2024-07-23T02:27:12.734+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2024-07-23T02:27:12.834+0000] {logging_mixin.py:188} INFO - [2024-07-23T02:27:12.834+0000] {dag.py:3947} INFO - Setting next_dagrun for binance_btcusdt_dag to 2024-07-23 02:20:00+00:00, run_after=2024-07-23 02:30:00+00:00
+[2024-07-23T02:27:12.911+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/dags/binance_btcusdt_dag.py took 0.311 seconds
+[2024-07-23T02:27:43.276+0000] {processor.py:161} INFO - Started process (PID=3473) to work on /opt/airflow/dags/dags/binance_btcusdt_dag.py
+[2024-07-23T02:27:43.277+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/dags/binance_btcusdt_dag.py for tasks to queue
+[2024-07-23T02:27:43.280+0000] {logging_mixin.py:188} INFO - [2024-07-23T02:27:43.279+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/dags/binance_btcusdt_dag.py
+[2024-07-23T02:27:43.287+0000] {processor.py:840} INFO - DAG(s) 'binance_btcusdt_dag' retrieved from /opt/airflow/dags/dags/binance_btcusdt_dag.py
+[2024-07-23T02:27:43.310+0000] {logging_mixin.py:188} INFO - [2024-07-23T02:27:43.309+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2024-07-23T02:27:43.337+0000] {logging_mixin.py:188} INFO - [2024-07-23T02:27:43.336+0000] {dag.py:3947} INFO - Setting next_dagrun for binance_btcusdt_dag to 2024-07-23 02:20:00+00:00, run_after=2024-07-23 02:30:00+00:00
+[2024-07-23T02:27:43.366+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/dags/binance_btcusdt_dag.py took 0.100 seconds

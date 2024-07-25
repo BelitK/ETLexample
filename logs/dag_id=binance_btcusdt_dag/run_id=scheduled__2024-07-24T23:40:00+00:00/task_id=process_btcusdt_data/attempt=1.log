@@ -1,0 +1,21 @@
+[2024-07-24T23:50:14.981+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2024-07-24T23:50:15.083+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: binance_btcusdt_dag.process_btcusdt_data scheduled__2024-07-24T23:40:00+00:00 [queued]>
+[2024-07-24T23:50:15.113+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: binance_btcusdt_dag.process_btcusdt_data scheduled__2024-07-24T23:40:00+00:00 [queued]>
+[2024-07-24T23:50:15.115+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 2
+[2024-07-24T23:50:15.171+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): process_btcusdt_data> on 2024-07-24 23:40:00+00:00
+[2024-07-24T23:50:15.194+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:62: DeprecationWarning: This process (pid=1057) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2024-07-24T23:50:15.202+0000] {standard_task_runner.py:64} INFO - Started process 1059 to run task
+[2024-07-24T23:50:15.203+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'binance_btcusdt_dag', 'process_btcusdt_data', 'scheduled__2024-07-24T23:40:00+00:00', '--job-id', '50', '--raw', '--subdir', 'DAGS_FOLDER/dags/binance_btcusdt_dag.py', '--cfg-path', '/tmp/tmper0d_tzf']
+[2024-07-24T23:50:15.212+0000] {standard_task_runner.py:91} INFO - Job 50: Subtask process_btcusdt_data
+[2024-07-24T23:50:15.387+0000] {task_command.py:426} INFO - Running <TaskInstance: binance_btcusdt_dag.process_btcusdt_data scheduled__2024-07-24T23:40:00+00:00 [running]> on host 258357fb674a
+[2024-07-24T23:50:15.786+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='binance_btcusdt_dag' AIRFLOW_CTX_TASK_ID='process_btcusdt_data' AIRFLOW_CTX_EXECUTION_DATE='2024-07-24T23:40:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-07-24T23:40:00+00:00'
+[2024-07-24T23:50:15.793+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2024-07-24T23:50:15.796+0000] {logging_mixin.py:188} INFO - BTCUSDT Price: 65394.00000000
+[2024-07-24T23:50:16.477+0000] {python.py:237} INFO - Done. Returned value was: None
+[2024-07-24T23:50:16.479+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2024-07-24T23:50:16.509+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=binance_btcusdt_dag, task_id=process_btcusdt_data, run_id=scheduled__2024-07-24T23:40:00+00:00, execution_date=20240724T234000, start_date=20240724T235015, end_date=20240724T235016
+[2024-07-24T23:50:16.586+0000] {local_task_job_runner.py:243} INFO - Task exited with return code 0
+[2024-07-24T23:50:16.652+0000] {taskinstance.py:3503} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-07-24T23:50:16.657+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

@@ -1,0 +1,11 @@
+CREATE TABLE btcusdt_data (
+    id SERIAL PRIMARY KEY,
+    price VARCHAR(50),
+    timestamp TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE solusdt_data (
+    id SERIAL PRIMARY KEY,
+    price VARCHAR(50),
+    timestamp TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
