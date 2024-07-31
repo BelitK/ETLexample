@@ -59,7 +59,7 @@ x-airflow-common:
     AIRFLOW__CELERY__BROKER_URL: redis://:@redis:6379/0
     AIRFLOW__CORE__FERNET_KEY: ''
     AIRFLOW__CORE__DAGS_ARE_PAUSED_AT_CREATION: 'true'
-    AIRFLOW__CORE__LOAD_EXAMPLES: 'true'
+    AIRFLOW__CORE__LOAD_EXAMPLES: 'false'
     AIRFLOW__API__AUTH_BACKENDS: 'airflow.api.auth.backend.basic_auth,airflow.api.auth.backend.session'
     # yamllint disable rule:line-length
     # Use simple http server on scheduler for health checks
@@ -92,14 +92,19 @@ services:
       POSTGRES_USER: airflow
       POSTGRES_PASSWORD: airflow
       POSTGRES_DB: airflow
+    ports:
+      - "5432:5432"
     volumes:
       - postgres-db-volume:/var/lib/postgresql/data
+      - ./postgres_config/postgresql.conf:/etc/postgresql/postgresql.conf
+      - ./postgres_config/pg_hba.conf:/etc/postgresql/pg_hba.conf
     healthcheck:
       test: ["CMD", "pg_isready", "-U", "airflow"]
       interval: 10s
       retries: 5
       start_period: 5s
     restart: always
+    command: ["postgres", "-c", "config_file=/etc/postgresql/postgresql.conf"]
 
   redis:
     # Redis is limited to 7.2-bookworm due to licencing change
@@ -115,11 +120,20 @@ services:
       start_period: 30s
     restart: always
 
+  projects:
+    build:
+      context: ./streamlit
+      dockerfile: Dockerfile
+    image: streamlit
+    restart: always
+    ports:
+      - 8501:8501
+
   airflow-webserver:
     <<: *airflow-common
     command: webserver
     ports:
-      - "8080:8080"
+      - "8090:8080"
     healthcheck:
       test: ["CMD", "curl", "--fail", "http://localhost:8080/health"]
       interval: 30s

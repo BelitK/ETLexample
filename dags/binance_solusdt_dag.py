@@ -33,11 +33,11 @@ def load(**kwargs):
         ti = kwargs['ti']
         data = ti.xcom_pull(key='transformed_data', task_ids='transform_btcusdt_data')
         conn = psycopg2.connect(
-            database="Secret",
-            user="Secret",
-            password="Secret",
-            host="Secret",
-            port="Secret"
+            database="airflow",
+            user="airflow",
+            password="airflow",
+            host="postgres",
+            port="5432"
         )
         cursor = conn.cursor()
         cursor.execute("INSERT INTO solusdt_data (price) VALUES (%s)", (data['price'],))

@@ -1,2 +1,5 @@
 .venv
 dags/__pycache__
+/logs
+/plugins
+.trunk
