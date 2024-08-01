@@ -16,15 +16,14 @@ elif [[ ${choice} == [cC] ]]; then
 	echo "creating tables"
     source .env
     execute_sql_file() {
-        cat $SQL_FILE | sudo docker exec -i coin-postgres-1 psql -U $DB_USER -d $DB_NAME
+        cat $1 | sudo docker exec -i coin-postgres-1 psql -U $DB_USER -d $DB_NAME
     }
-    read -p "enter sql file: " SQL_FILE
+    read -p "enter folder name with sqls " SQL_FOLDER
 
 
-    if [ -f "$SQL_FILE" ]; then
-        execute_sql_file
-        echo "SQL script executed successfully."
-    else 
-        echo "$SQL_FILE does not exist."
-    fi
+    for sql in "$SQL_FOLDER"/*
+    do
+      echo "running $sql now"
+      execute_sql_file $sql
+    done
 fi

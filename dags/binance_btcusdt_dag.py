@@ -6,12 +6,12 @@ from airflow.utils.dates import days_ago
 import requests
 import json
 import psycopg2
+from utils import fetch_data_sync
 
 def extract(**kwargs):
     try:
         url = 'https://api.binance.com/api/v3/ticker/price?symbol=BTCUSDT'
-        response = requests.get(url)
-        response.raise_for_status()  # Raises HTTPError if the HTTP request returned an unsuccessful status code
+        response = fetch_data_sync(url)
         data = response.json()
         kwargs['ti'].xcom_push(key='raw_data', value=data)
     except requests.exceptions.RequestException as e:

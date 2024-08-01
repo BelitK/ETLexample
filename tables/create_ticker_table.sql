@@ -1,0 +1,22 @@
+CREATE TABLE IF NOT EXISTS btcusdt_ticker (
+    id SERIAL PRIMARY KEY,
+    price_change NUMERIC,
+    price_change_percent NUMERIC,
+    weighted_avg_price NUMERIC,
+    prev_close_price NUMERIC,
+    last_price NUMERIC,
+    last_qty NUMERIC,
+    bid_price NUMERIC,
+    ask_price NUMERIC,
+    open_price NUMERIC,
+    high_price NUMERIC,
+    low_price NUMERIC,
+    volume NUMERIC,
+    quote_volume NUMERIC,
+    open_time TIMESTAMP,
+    close_time TIMESTAMP,
+    first_id BIGINT,
+    last_id BIGINT,
+    count INT,
+    processed BOOLEAN DEFAULT FALSE
+);

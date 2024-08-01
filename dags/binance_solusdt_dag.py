@@ -6,11 +6,12 @@ from airflow.utils.dates import days_ago
 import requests
 import json
 import psycopg2
+from utils import fetch_data_sync
 
 def extract(**kwargs):
     try:
         url = 'https://api.binance.com/api/v3/ticker/price?symbol=SOLUSDT'
-        response = requests.get(url)
+        response = fetch_data_sync(url)
         response.raise_for_status()  # Raises HTTPError if the HTTP request returned an unsuccessful status code
         data = response.json()
         kwargs['ti'].xcom_push(key='raw_data', value=data)
@@ -25,7 +26,7 @@ def transform(**kwargs):
             raise ValueError("Price data not found in the fetched data")
         data['price'] = str(round(float(data['price']),2))
         ti.xcom_push(key='transformed_data', value=data)
-    except Exception as e:
+    except Exception as e:    
         raise RuntimeError(f"Error transforming data: {e}")
 
 def load(**kwargs):
