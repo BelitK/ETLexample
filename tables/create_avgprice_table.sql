@@ -1,7 +1,0 @@
-CREATE TABLE IF NOT EXISTS crypto_avgprice (
-    id SERIAL PRIMARY KEY,
-    mins INT,
-    price NUMERIC,
-    timestamp TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    processed BOOLEAN DEFAULT FALSE
-);
