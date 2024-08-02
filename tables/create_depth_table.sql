@@ -1,8 +1,8 @@
-CREATE TABLE IF NOT EXISTS btcusdt_depth (
+CREATE TABLE IF NOT EXISTS crypto_depth (
     id SERIAL PRIMARY KEY,
-    last_update_id BIGINT,
-    bids JSONB,
-    asks JSONB,
+    lastUpdateId BIGINT,
+    bids TEXT,
+    asks TEXT,
     timestamp TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     processed BOOLEAN DEFAULT FALSE
 );

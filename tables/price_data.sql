@@ -1,12 +1,6 @@
-CREATE TABLE IF NOT EXISTS btcusdt_data (
+CREATE TABLE IF NOT EXISTS crypto_price_data (
     id SERIAL PRIMARY KEY,
-    price VARCHAR(50),
-    timestamp TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    processed BOOLEAN DEFAULT FALSE
-);
-
-CREATE TABLE IF NOT EXISTS solusdt_data (
-    id SERIAL PRIMARY KEY,
+    symbol VARCHAR(50),
     price VARCHAR(50),
     timestamp TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     processed BOOLEAN DEFAULT FALSE

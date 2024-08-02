@@ -1,4 +1,4 @@
-CREATE TABLE IF NOT EXISTS btcusdt_avgprice (
+CREATE TABLE IF NOT EXISTS crypto_avgprice (
     id SERIAL PRIMARY KEY,
     mins INT,
     price NUMERIC,

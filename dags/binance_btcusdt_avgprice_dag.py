@@ -1,8 +1,11 @@
+from datetime import datetime, timedelta
 from airflow import DAG
 from airflow.operators.python_operator import PythonOperator
+from airflow.operators.dummy_operator import DummyOperator
 from airflow.utils.dates import days_ago
-from datetime import timedelta
-from utils import fetch_data_sync
+import requests
+from utils import fetch_data_sync, insert_data
+
 
 default_args = {
     'owner': 'airflow',
@@ -17,21 +20,63 @@ dag = DAG(
     'binance_btcusdt_avgprice_dag',
     default_args=default_args,
     description='Fetch BTCUSDT average price from Binance',
-    schedule_interval=timedelta(minutes=10),
+    schedule_interval=timedelta(minutes=5),
     start_date=days_ago(1),
     catchup=False,
 )
+#TODO fix data price check
+def fetch_avgprice(**kwargs):
+    try:
+        url = 'https://api.binance.com/api/v3/avgPrice?symbol=BTCUSDT'
+        data = fetch_data_sync(url)
+        kwargs["ti"].xcom_push(key="raw_data", value=data)
+    except requests.exceptions.RequestException as e:
+        raise RuntimeError(f"Error fetching data from Binance: {e}")
 
-def fetch_avgprice():
-    url = 'https://api.binance.com/api/v3/avgPrice?symbol=BTCUSDT'
-    data = fetch_data_sync(url)
-    # Process data here
-    print(data)
+def transform(**kwargs):
+    try:
+        ti = kwargs["ti"]
+        data = ti.xcom_pull(key="raw_data", task_ids="fetch_avgprice")
+        if "price" not in data:
+            raise ValueError("Price data not found in the fetched data")
+        data["price"] = str(round(float(data["price"]), 2))
+        data.pop("closeTime")
+        ti.xcom_push(key="transformed_data", value=data)
+    except Exception as e:
+        raise RuntimeError(f"Error transforming data: {e}")
 
-fetch_avgprice_task = PythonOperator(
-    task_id='fetch_avgprice',
+
+def load(**kwargs):
+    try:
+        ti = kwargs["ti"]
+        data = ti.xcom_pull(key="transformed_data", task_ids="transform_btcusdt_data")
+        insert_data("crypto_avgprice", data)
+    except Exception as e:
+        raise RuntimeError(f"Error connecting to the database: {e}")
+
+start_task = DummyOperator(task_id="start", dag=dag)
+
+extract_task = PythonOperator(
+    task_id="fetch_avgprice",
     python_callable=fetch_avgprice,
+    provide_context=True,
     dag=dag,
 )
 
-fetch_avgprice_task
+transform_task = PythonOperator(
+    task_id="transform_btcusdt_data",
+    python_callable=transform,
+    provide_context=True,
+    dag=dag,
+)
+
+load_task = PythonOperator(
+    task_id="load_btcusdt_data",
+    python_callable=load,
+    provide_context=True,
+    dag=dag,
+)
+
+end_task = DummyOperator(task_id="end", dag=dag)
+
+start_task >> extract_task >> transform_task >> load_task >> end_task

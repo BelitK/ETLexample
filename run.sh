@@ -4,7 +4,7 @@ read -r -p "Run Compose [R] or Create Tables [C] or Stop Compose [S] o  First Ru
 
 if [[ ${choice} == [rR] ]]; then
 	echo "building with compose"
-	sudo docker compose up -d --build --remove-orphan || sudo docker compose up -d --build
+	sudo docker compose up -d --build --remove-orphans || sudo docker compose up -d --build
 elif [[ ${choice} == [sS] ]]; then
 	echo "Stopping Compose"
 	sudo docker compose down -v
