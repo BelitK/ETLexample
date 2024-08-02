@@ -21,5 +21,6 @@ CREATE TABLE IF NOT EXISTS crypto_ticker (
     firstId BIGINT,
     lastId BIGINT,
     count INT,
+    timestamp TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     processed BOOLEAN DEFAULT FALSE
 );
