@@ -16,7 +16,7 @@ elif [[ ${choice} == [cC] ]]; then
 	echo "creating tables"
     source .env
     execute_sql_file() {
-        cat $1 | sudo docker exec -i coin-postgres-1 psql -U $DB_USER -d $DB_NAME
+        cat $1 | sudo docker exec -i etlexample-postgres-1 psql -U $DB_USER -d $DB_NAME
     }
     read -p "enter folder name with sqls " SQL_FOLDER
 
