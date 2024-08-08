@@ -3,6 +3,8 @@ import asyncio
 import time
 import logging
 import psycopg2
+import pandas as pd
+from sqlalchemy import create_engine
 
 # Configure logging
 logging.basicConfig(level=logging.INFO)
@@ -52,26 +54,77 @@ async def fetch_data(url):
 def fetch_data_sync(url):
     return asyncio.run(fetch_data(url))
 
-
-def insert_data(table, data):
+def generate_conn(conn_type = 'psql'):
     try:
-        conn = psycopg2.connect(
-            database="airflow",
-            user="airflow",
-            password="airflow",
-            host="postgres",
-            port="5432",
-        )
-        cursor = conn.cursor()
-        placeholders = ', '.join([a for a in data.keys()])
-        values = [a for a in data.values()]
-        esses = ', '.join(['%s'] * len(data))
-        print(placeholders)
-        cursor.execute(f"INSERT INTO {table} ({placeholders}) VALUES ({esses})", values)
-        conn.commit()
-        cursor.close()
-        conn.close()
+        if conn_type == 'psql':
+            conn = psycopg2.connect(
+                database="airflow",
+                user="airflow",
+                password="airflow",
+                host="postgres",
+                port="5432",
+            )
+        elif conn_type == 'alch':
+            # Define the PostgreSQL URL
+            postgresql_url = 'postgresql://airflow:airflow@postgres:5432/airflow'
+
+            # Create an engine
+            conn = create_engine(postgresql_url).connect().connection
+        else :
+            raise RuntimeError('incorrect type selection')
+        return conn
+    except psycopg2.DatabaseError as e:
+        raise RuntimeError(f"Error connecting to the database: {e}")
+    except Exception as e:
+        raise RuntimeError(f"Error  {e}")
+
+def get_data(table):
+    try:
+        conn = generate_conn(conn_type='alch')
+        return pd.read_sql(f'Select * from {table} where processed = False;',conn)
+    except Exception as e:
+        raise RuntimeError(f"Error: {e}")
+
+def insert_data(table, data, conn_type='psql'):
+    try:
+        if conn_type == 'psql':
+            conn = generate_conn()
+            cursor = conn.cursor()
+            placeholders = ', '.join([a for a in data.keys()])
+            values = [a for a in data.values()]
+            esses = ', '.join(['%s'] * len(data))
+            print(placeholders)
+            cursor.execute(f"INSERT INTO {table} ({placeholders}) VALUES ({esses})", values)
+            conn.commit()
+            cursor.close()
+            conn.close()
+        elif conn_type=='alch':
+            conn = generate_conn()
+            cursor = conn.cursor()
+
+            columns = ", ".join(data.columns)
+            values = ", ".join(["%s"] * len(data.columns))
+            insert_statement = f"INSERT INTO {table} ({columns}) VALUES ({values})"
+            # Insert DataFrame data into the PostgreSQL table
+            for _, row in data.iterrows():
+                cursor.execute(insert_statement, tuple(row))
+            conn.commit()
+            cursor.close()
+            conn.close()
     except psycopg2.DatabaseError as e:
         raise RuntimeError(f"Error connecting to the database: {e}")
     except Exception as e:
         raise RuntimeError(f"Error loading data into the database: {e}")
+
+
+def update_data(table, data):
+    try:
+        conn = generate_conn()
+        cursor = conn.cursor()
+        for id in data:
+            cursor.execute(f"update {table} set processed = True where id={id}")
+        conn.commit()
+        cursor.close()
+        conn.close()
+    except Exception as e:
+        raise RuntimeError(f"Error updating data in the database: {e}")

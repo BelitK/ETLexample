@@ -1,0 +1,20 @@
+CREATE TABLE simplified_data (
+    price VARCHAR(50),
+    timestamp TIMESTAMP,
+    lastupdateid BIGINT,
+    pricechange DECIMAL(18,8),
+    pricechangepercent DECIMAL(18,8),
+    weightedavgprice DECIMAL(18,8),
+    prevcloseprice DECIMAL(18,8),
+    lastprice DECIMAL(18,8),
+    lastqty DECIMAL(18,8),
+    bidprice DECIMAL(18,8),
+    bidqty DECIMAL(18,8),
+    askprice DECIMAL(18,8),
+    askqty DECIMAL(18,8),
+    openprice DECIMAL(18,8),
+    highprice DECIMAL(18,8),
+    lowprice DECIMAL(18,8),
+    volume DECIMAL(18,8),
+    quotevolume DECIMAL(18,8)
+);
