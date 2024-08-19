@@ -105,6 +105,8 @@ services:
       start_period: 5s
     restart: always
     command: ["postgres", "-c", "config_file=/etc/postgresql/postgresql.conf"]
+    networks:
+      - backend
 
   redis:
     # Redis is limited to 7.2-bookworm due to licencing change
@@ -119,7 +121,20 @@ services:
       retries: 50
       start_period: 30s
     restart: always
-
+    networks:
+      - backend
+  ai:
+    build:
+      context: ./ai
+      dockerfile: Dockerfile
+    image: ai
+    volumes:
+      - /ai/models:/models
+    restart: always
+    ports:
+      - 2000:2000
+    networks:
+      - backend
   projects:
     build:
       context: ./streamlit
@@ -128,6 +143,8 @@ services:
     restart: always
     ports:
       - 8501:8501
+    networks:
+      - backend
   spark-master:
     image: bitnami/spark:latest
     container_name: spark-master
@@ -138,6 +155,8 @@ services:
     ports:
       - "7077:7077"
       - "8080:8080"
+    networks:
+      - backend
   spark-worker:
     image: bitnami/spark:latest
     container_name: spark-worker
@@ -146,6 +165,8 @@ services:
       - SPARK_MASTER_URL=spark://spark-master:7077
     depends_on:
       - spark-master
+    networks:
+      - backend
   airflow-webserver:
     <<: *airflow-common
     command: webserver
@@ -162,7 +183,8 @@ services:
       <<: *airflow-common-depends-on
       airflow-init:
         condition: service_completed_successfully
-
+    networks:
+      - backend
   airflow-scheduler:
     <<: *airflow-common
     command: scheduler
@@ -177,6 +199,8 @@ services:
       <<: *airflow-common-depends-on
       airflow-init:
         condition: service_completed_successfully
+    networks:
+      - backend
 
   airflow-worker:
     <<: *airflow-common
@@ -200,7 +224,8 @@ services:
       <<: *airflow-common-depends-on
       airflow-init:
         condition: service_completed_successfully
-
+    networks:
+      - backend
   airflow-triggerer:
     <<: *airflow-common
     command: triggerer
@@ -215,6 +240,8 @@ services:
       <<: *airflow-common-depends-on
       airflow-init:
         condition: service_completed_successfully
+    networks:
+      - backend
 
   airflow-init:
     <<: *airflow-common
@@ -279,7 +306,8 @@ services:
     user: "0:0"
     volumes:
       - ${AIRFLOW_PROJ_DIR:-.}:/sources
-
+    networks:
+      - backend
   airflow-cli:
     <<: *airflow-common
     profiles:
@@ -317,3 +345,6 @@ services:
 
 volumes:
   postgres-db-volume:
+networks:
+  backend:
+    name: etl_backend
