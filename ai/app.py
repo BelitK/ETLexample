@@ -2,6 +2,7 @@ from fastapi import FastAPI, HTTPException, BackgroundTasks
 from pydantic import BaseModel
 import numpy as np
 import time
+from datetime import datetime
 from sklearn.metrics import mean_squared_error
 from model import build_model, load_model_and_scalers, save_temp_model, save_model_and_scalers, \
     rollback_to_previous_model
@@ -16,6 +17,7 @@ performance_metrics = {"mse": float('inf')}
 # Request model for prediction input
 class PredictionRequest(BaseModel):
     features: list
+    timestamp: str
 
 
 @app.post("/predict")
@@ -23,6 +25,12 @@ def predict(request: PredictionRequest):
     model, scaler_X, scaler_y = load_model_and_scalers()
 
     try:
+        timestamp = datetime.strptime(request.timestamp, "%Y-%m-%d %H:%M:%S.%f")
+        # Example: Convert timestamp to a UNIX timestamp or extract features from it
+        unix_time = int(timestamp.timestamp())
+        # Add the unix_time or other derived features to the input features
+        request.features.insert(0, unix_time)
+
         input_data = np.array(request.features).reshape(1, -1)
         scaled_input = scaler_X.transform(input_data).reshape(1, -1, len(input_data[0]))
 
@@ -30,8 +38,9 @@ def predict(request: PredictionRequest):
         timesteps = 1  # Since we're predicting with a single instance
         features = 17  # Number of features
         scaled_input = scaled_input.reshape((1, timesteps, features))
-
+        print(scaler_y)
         scaled_prediction = model.predict(scaled_input)
+
         prediction = scaler_y.inverse_transform(scaled_prediction).flatten()
 
         # Update performance metrics (e.g., MSE)
@@ -43,6 +52,7 @@ def predict(request: PredictionRequest):
         return {"prediction": prediction[0]}
 
     except Exception as e:
+        print(e)
         raise HTTPException(status_code=400, detail=str(e))
 
 
@@ -77,8 +87,8 @@ def train_temp_model_in_background():
         pandas_df = load_and_preprocess_data()
 
         # Split the data into training and validation sets
-        train_df = pandas_df.sample(frac=0.8, random_state=42)  # 80% training data
-        val_df = pandas_df.drop(train_df.index)  # 20% validation data
+        train_df = pandas_df.sample(frac=0.7, random_state=42)  # 70% training data
+        val_df = pandas_df.drop(train_df.index)  # 30% validation data
 
         # Generate sequences for training and validation
         X_train, y_train = generate_sequences(train_df, scaler_X, scaler_y)
@@ -103,7 +113,7 @@ def train_temp_model_in_background():
             X_batch = X_train[batch_num * batch_size:(batch_num + 1) * batch_size]
             y_batch = y_train[batch_num * batch_size:(batch_num + 1) * batch_size]
 
-            model.fit(X_batch, y_batch, batch_size=batch_size, epochs=epochs_per_batch, verbose=1)
+            model.fit(X_batch, y_batch, batch_size=batch_size, epochs=epochs_per_batch, verbose=0)
 
     except Exception as e:
         print(f"temp training error: {e}")
@@ -134,7 +144,7 @@ def validate_and_deploy_model():
     mse = train_temp_model_in_background()
 
     # Set a threshold for validation
-    validation_threshold = 500000  # Adjust this threshold based on your problem
+    validation_threshold = 600000  # Adjust this threshold based on your problem
 
     if mse < validation_threshold:
         model, scaler_X, scaler_y = load_model_and_scalers(temp=True)
@@ -165,7 +175,7 @@ def continuous_learning_loop():
         while True:
             mse = train_temp_model_in_background()
 
-            if mse < 500000:  # Replace 1000 with your validation threshold
+            if mse < 600000:  # Replace 1000 with your validation threshold
                 validate_and_deploy_model()
 
             # Wait for the next learning cycle (e.g., every 1 hour)

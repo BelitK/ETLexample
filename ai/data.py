@@ -13,7 +13,7 @@ spark = SparkSession.builder \
 
 def load_and_preprocess_data():
     # PostgreSQL connection properties
-    db_url = "jdbc:postgresql://postgres:5432/airflow"  # Replace with your PostgreSQL database
+    db_url = "jdbc:postgresql://localhost:5432/airflow"  # Replace with your PostgreSQL database
     db_properties = {"user": "airflow","password": "airflow","driver": "org.postgresql.Driver"}
 
     # Load the data from PostgreSQL table
@@ -58,13 +58,14 @@ def generate_sequences(pandas_df, scaler_X, scaler_y):
         y_values = np.array(y_values, dtype=np.float32)
     except Exception as e:
         print(f"sequence error : {e}")
+        print("possibly not enough data")
         raise e
     return X_sequences, y_values
 
 
 def clear_simplified_data_table():
     try:
-        db_url = "jdbc:postgresql://postgres:5432/airflow"  # Replace with your PostgreSQL database URL
+        db_url = "jdbc:postgresql://localhost:5432/airflow"  # Replace with your PostgreSQL database URL
         db_properties = {
             "user": "airflow",
             "password": "airflow",

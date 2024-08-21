@@ -8,11 +8,10 @@ import time
 
 # Paths for saving the models and scalers
 model_dir = "models"
-temp_model_path = "temp_model.keras"
+temp_model_path = os.path.join(model_dir, "temp_model.keras")
 scaler_X_path = "scaler_X.pkl"
 scaler_y_path = "scaler_y.pkl"
-current_model_symlink = "current_model.keras"
-
+current_model_path = None  # Use this variable to track the current model
 
 @tf.keras.utils.register_keras_serializable()
 def custom_mse():
@@ -42,17 +41,32 @@ def build_model(input_shape):
 
 
 def load_model_and_scalers(temp=False):
+    global current_model_path  # Ensure we update the global variable
+
     try:
+        model = None
+
+        # Attempt to load the temporary model if specified
         if temp and os.path.exists(temp_model_path):
             print(f"Loading temporary model from {temp_model_path}")
             model = tf.keras.models.load_model(temp_model_path, custom_objects={'custom_mse': custom_mse})
-            print("Temporary model loaded from disk.")
-        elif os.path.exists(current_model_symlink):
-            print(f"Loading model from symlink {current_model_symlink}")
-            model = tf.keras.models.load_model(current_model_symlink, custom_objects={'custom_mse': custom_mse})
-            print("Model loaded from symlink.")
+            print(f"Temporary model loaded from {temp_model_path}.")
+        # Attempt to load the current model using the current_model_path variable
+        elif current_model_path and os.path.exists(current_model_path):
+            model = tf.keras.models.load_model(current_model_path, custom_objects={'custom_mse': custom_mse})
+            print(f"Model loaded from {current_model_path}.")
+        # If no current model, attempt to find the most recent model
         else:
-            print("Initializing new model")
+            versions = sorted(os.listdir(model_dir), reverse=True)
+            if versions:
+                latest_version = versions[0]
+                latest_model_path = os.path.join(model_dir, latest_version, f"model_{latest_version}.keras")
+                model = tf.keras.models.load_model(latest_model_path, custom_objects={'custom_mse': custom_mse})
+                current_model_path = latest_model_path
+                print(f"Model loaded from {latest_model_path}.")
+
+        # If no models are found, initialize a new model
+        if model is None:
             model = build_model((10, 17))  # Placeholder input shape: (timesteps, features)
             print("New model initialized.")
 
@@ -100,9 +114,8 @@ def save_model_and_scalers(model, scaler_X, scaler_y, validated=False):
         print(f"Model and scalers saved to {version_dir}.")
 
         if validated:
-            if os.path.exists(current_model_symlink):
-                os.remove(current_model_symlink)
-            os.symlink(model_path, current_model_symlink)
+            current_model_symlink = model_path
+            # Replace or create the symlink
             print(f"Symlink updated to new model version: {timestamp}")
 
     except Exception as e:
@@ -120,9 +133,7 @@ def rollback_to_previous_model():
         previous_version = versions[1]
         previous_model_path = os.path.join(model_dir, previous_version, f"model_{previous_version}.keras")
 
-        if os.path.exists(current_model_symlink):
-            os.remove(current_model_symlink)
-        os.symlink(previous_model_path, current_model_symlink)
+        current_model_symlink = previous_model_path
         print(f"Rolled back to previous model version: {previous_version}")
 
     except Exception as e:

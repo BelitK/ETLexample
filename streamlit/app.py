@@ -1,6 +1,7 @@
 import streamlit as st
 import requests
 import pandas as pd
+import datetime
 
 # Streamlit App
 st.title("Time Series Prediction App")
@@ -8,7 +9,9 @@ st.write("Enter feature values to predict the target variable.")
 
 # Define input features
 def user_input_features():
-    timestamp = st.number_input("Timestamp", min_value=0)
+    # Automatically get the current timestamp in the specified format
+    current_timestamp = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S.%f")
+
     lastupdateid = st.number_input("Last Update ID", min_value=0)
     pricechange = st.number_input("Price Change", value=0.0)
     pricechangepercent = st.number_input("Price Change Percent", value=0.0)
@@ -26,26 +29,43 @@ def user_input_features():
     volume = st.number_input("Volume", value=0.0)
     quotevolume = st.number_input("Quote Volume", value=0.0)
 
-    data = {
-        'timestamp': timestamp,
-        'lastupdateid': lastupdateid,
-        'pricechange': pricechange,
-        'pricechangepercent': pricechangepercent,
-        'weightedavgprice': weightedavgprice,
-        'prevcloseprice': prevcloseprice,
-        'lastprice': lastprice,
-        'lastqty': lastqty,
-        'bidprice': bidprice,
-        'bidqty': bidqty,
-        'askprice': askprice,
-        'askqty': askqty,
-        'openprice': openprice,
-        'highprice': highprice,
-        'lowprice': lowprice,
-        'volume': volume,
-        'quotevolume': quotevolume
-    }
-
+    # data = {
+    #     'timestamp': current_timestamp,
+    #     'lastupdateid': lastupdateid,
+    #     'pricechange': pricechange,
+    #     'pricechangepercent': pricechangepercent,
+    #     'weightedavgprice': weightedavgprice,
+    #     'prevcloseprice': prevcloseprice,
+    #     'lastprice': lastprice,
+    #     'lastqty': lastqty,
+    #     'bidprice': bidprice,
+    #     'bidqty': bidqty,
+    #     'askprice': askprice,
+    #     'askqty': askqty,
+    #     'openprice': openprice,
+    #     'highprice': highprice,
+    #     'lowprice': lowprice,
+    #     'volume': volume,
+    #     'quotevolume': quotevolume
+    # }
+    data = {"features":[
+        lastupdateid,
+        pricechange,
+        pricechangepercent,
+        weightedavgprice,
+        prevcloseprice,
+        lastprice,
+        lastqty,
+        bidprice,
+        bidqty,
+        askprice,
+        askqty,
+        openprice,
+        highprice,
+        lowprice,
+        volume,
+        quotevolume
+    ], "timestamp":current_timestamp}
     return data
 
 input_data = user_input_features()
@@ -54,7 +74,7 @@ input_data = user_input_features()
 if st.button("Predict"):
     # Send the data to the FastAPI server
     try:
-        response = requests.post("http://localhost:2000/predict/", json=input_data)
+        response = requests.post("http://localhost:8000/predict/", json=input_data)
         response_data = response.json()
         predicted_value = response_data['prediction']
 
@@ -64,4 +84,5 @@ if st.button("Predict"):
 
 # Display input features
 st.write("Input Features")
+st.write(response_data)
 st.write(pd.DataFrame([input_data]))

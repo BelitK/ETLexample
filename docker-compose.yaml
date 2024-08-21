@@ -129,7 +129,7 @@ services:
       dockerfile: Dockerfile
     image: ai
     volumes:
-      - /ai/models:/models
+      - ./ai/models:/models
     restart: always
     ports:
       - 2000:2000
