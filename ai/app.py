@@ -38,18 +38,16 @@ def predict(request: PredictionRequest):
         timesteps = 1  # Since we're predicting with a single instance
         features = 17  # Number of features
         scaled_input = scaled_input.reshape((1, timesteps, features))
-        print(scaler_y)
         scaled_prediction = model.predict(scaled_input)
-
         prediction = scaler_y.inverse_transform(scaled_prediction).flatten()
 
         # Update performance metrics (e.g., MSE)
         update_performance_metrics(scaled_input, prediction)
-
+        print(f"prediction {type(prediction[0].item())}")
         # Automatically check if rollback is needed
         check_rollback_criteria()
-
-        return {"prediction": prediction[0]}
+        # .item() needed because fastapi raises encoder error with numpy types
+        return {"prediction": prediction[0].item()}
 
     except Exception as e:
         print(e)
@@ -60,12 +58,14 @@ def update_performance_metrics(input_data, prediction):
     # Example: Calculate MSE using dummy actual values; in real cases, use actual values
     actual_values = np.array(input_data).flatten()
     prediction = np.array(prediction).flatten()
-    mse = mean_squared_error(actual_values, prediction)
+    try:
+        mse = mean_squared_error(actual_values, prediction)
 
-    # Update the global performance metrics
-    performance_metrics["mse"] = mse
-
-
+        # Update the global performance metrics
+        performance_metrics["mse"] = mse
+    except Exception as e:
+        print(f"can't update mse, error: {e}")
+        ##TODO check data input from /predict and refactor mse update part
 def check_rollback_criteria():
     mse_threshold = 500000  # Define a threshold for MSE that triggers rollback
 
@@ -119,7 +119,7 @@ def train_temp_model_in_background():
         print(f"temp training error: {e}")
         raise e
     # Save the model as a temporary model
-    save_temp_model(model)
+    save_temp_model(model, scaler_X, scaler_y)
 
     # Evaluate the model on the validation set
     val_predictions = model.predict(X_val).flatten()
